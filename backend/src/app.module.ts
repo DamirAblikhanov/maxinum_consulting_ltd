@@ -9,6 +9,7 @@ import { createDatabaseIfNotExists } from './database.init';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      envFilePath: '.env.dev',
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
